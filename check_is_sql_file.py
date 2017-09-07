@@ -1,3 +1,5 @@
+from __future__ import print_function
+
 def is_sql_file(fileName):
     from os.path import isfile, getsize
 
@@ -9,8 +11,8 @@ def is_sql_file(fileName):
         f = open(fileName, "rb")
         Header = f.read(100)
         f.close()
-        print Header[0:20]
+        print (Header[0:20])
     log = open("fileName", "w")
-    print log
+    print (log)
 if __name__ == '__main__':
     is_sql_file("newFile")
