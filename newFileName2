@@ -1,0 +1,334 @@
+
+
+
+
+
+
+
+
+
+bet365 - 体育投注，英超联赛，欧冠联赛和国际足球赔率，以及大满贯网球赔率，娱乐场，扑克牌，游戏，维加斯
+
+
+
+
+					a.lang1, a.lang2:hover {color:#FFFFFF; font-size:11px; text-decoration: none; font-weight:normal;font-family: Verdana, Arial, sans-serif;}
+					a.lang1:hover, a.lang2 {color:#FFDF1B; font-size:11px; text-decoration: none; font-weight:normal;font-family: Verdana, Arial, sans-serif;}
+					a.tl{color:#417667;;text-decoration: underline;}
+					a.tl:hover{color:#ffdf1b;text-decoration: underline;}
+					div.blur {position:absolute;top:72px;height:100%;width:100%;display:;visilibity:;opacity:.8;filter: alpha(opacity=90);z-index:2000;}
+					div.bet365 {background-color:#046E51;}
+					a.cifb{color:#b3b3b3;text-decoration:none;}
+					a.cifb:hover{color:#ffdf1b;text-decoration:underline;}
+					a.headerlink{color:#9bcebf;text-decoration: underline;}
+					a.headerlink:hover{color:#ffdf1b;text-decoration: underline;}
+					@-moz-document url-prefix() {
+						.footerLinks a {font-size: 9.49px}
+						#FooterLinkWrapper a:first-child {padding-left: 14px;}
+					}
+				
+          
+					function EnabelPage()
+					{
+						var oDiv = document.getElementById('dBlur');
+						oDiv.style.display = 'none';
+						oDiv.style.visibility = 'hidden';
+						document.onkeydown = null;
+					}
+					
+					function setSiteLang(id)
+					{
+						var oLng = document.getElementById('txtLang');
+						if (oLng !== null)
+						{
+							oLng.value = id;
+							document.frmMain.submit();
+						}
+					}
+					
+					function setDWLang(id)
+					{
+						var oURL = document.getElementById('txtDWURL');
+						if (oURL !== null)
+						{
+							document.frmMain.action = oURL.value + '&lng=' + id;
+							document.frmMain.submit();
+						}
+						else
+						{
+							document.frmMain.action = 'https://www.bet365.com/home/default.asp?lng=' + id;
+							document.frmMain.submit();
+						}
+					}
+					function setTimeZone()
+					{
+						var oTZ = document.getElementById('txtTimeZone');
+						SetCookie("aps03", "tzi", oTZ.value);
+						SetCookie("aps", "tzi", oTZ.value);
+						return true;						
+					}
+
+					function tdBC(oE, oT)
+					{
+						if(oE.id)
+						{
+							if (Number(oT) == 1)
+							{
+								oE.className = "lpgb";
+							}
+							else
+							{
+								oE.className = "lpyb";
+							}
+						}
+						
+						if(oE.parentNode.id)
+						{
+							var oPE = document.getElementById(oE.parentNode.id);
+							if (oPE !== null)
+							{
+								if (Number(oT) == 1)
+								{
+									oPE.className = "lpgb";
+								}
+								else
+								{
+									oPE.className = "lpyb";
+								}
+							}
+						}
+					}
+					
+					function lHW(pID)
+					{
+						var sURL = document.getElementById('txtURL') !== null ? document.getElementById('txtURL').value : '';
+						var sLNG = 10;
+						
+						if (sURL.length > 0){
+
+							var sLeft = (screen.width / 2) - (933 / 2);
+							var sTop = (screen.height / 2) - (750 / 2);							
+							sURL= 'http://'+sURL+'defaulthmr.asp?popmembers=' + pID + '&isb=0&lng=' + sLNG
+							windowOpen(pID, true, sURL, "height=750,width=933,left=" + sLeft + ",top=" + sTop);
+						}
+						/*LID: 10 ZONE:3*/
+					}
+					
+					function lHW2WithSiteId(pID, sSiteId)
+					{
+						var sURL = document.getElementById('txtURL') !== null ? document.getElementById('txtURL').value : '';
+						var sLNG = 10;
+						
+						
+						if (sURL.length > 0){
+
+							var sLeft = (screen.width / 2) - (933 / 2);
+							var sTop = (screen.height / 2) - (750 / 2);							
+
+							sURL= 'http://'+sURL.replace('www','help') +'mainpage.asp?ibpid=' + pID + '&isb=0&sctid=1&lng=' + sLNG + '&sg=' + sSiteId
+							windowOpen(pID, true, sURL, "height=750,width=933,left=" + sLeft + ",top=" + sTop);
+						}
+						/*LID: 10 ZONE:3*/
+					}
+					
+					function lHW2(pID)
+					{
+						var sURL = document.getElementById('txtURL') !== null ? document.getElementById('txtURL').value : '';
+						var sLNG = 10;
+						
+						if (sURL.length > 0){
+
+							var sLeft = (screen.width / 2) - (933 / 2);
+							var sTop = (screen.height / 2) - (750 / 2);							
+							sURL= 'http://'+sURL+'defaulthmr.asp?popmembers=' + pID + '&isb=0&lng=' + sLNG
+							windowOpen(pID, true, sURL, "height=750,width=933,left=" + sLeft + ",top=" + sTop);
+						}
+						/*LID: 10 ZONE:3*/
+					}
+					
+					function lHWUrl(url)
+					{
+						var sURL = url;
+						
+						if (sURL.length > 0){
+
+							var sLeft = (screen.width / 2) - (933 / 2);
+							var sTop = (screen.height / 2) - (750 / 2);		
+								if(sURL.indexOf("company-information") > -1)
+								{windowOpen('help-companyinformation', true, sURL, "height=750,width=933,left=" + sLeft + ",top=" + sTop);}
+								else
+								{windowOpen('help-fairpayout', true, sURL, "height=750,width=933,left=" + sLeft + ",top=" + sTop);}							
+							
+						}
+					}
+
+
+					function FinishPL()
+					{
+						document.frmMain.submit();
+					}
+					function LnhChatLanding(uid,langID,site,product,DLC){
+						var qstr='uid='+uid+'&langID='+langID+'&product='+product+'&site='+site+'&IsDLC='+DLC;
+						var width = g_windowSizeLiveChat[0];
+						var height = g_windowSizeLiveChat[1];
+						var left = (screen.width / 2) - (width / 2);
+						var top = (screen.height / 2) - (height / 2);
+						var chatType = '';						
+						if (chatType=='1')
+						{
+							sURL='https://members.bet365.com/members/chat/?prdid=1&lng=10';
+							windowOpenLiveChat(sURL, "height=" + height + ",width=" + width + ",left=" + left + ",top=" + top);
+						}
+						else
+						{
+						windowOpenLiveChat('/home/livechat.asp?' + qstr, "height=" + height + ",width=" + width + ",left=" + left + ",top=" + top);
+						}
+					}
+					
+					function GoToTandCPage()
+					{
+						var targetUrl = 'http://www.bet365.com/extra/zh-CHS/promotions/open-account-offer/';
+						window.open(targetUrl, 'extra', 'height=640,width=795,scrollbars=yes');
+						if(window.event != null)
+						{
+							window.event.cancelBubble = true;
+						}
+						return false;
+					}
+
+		    
+3:zid							
+							10:lid
+							0:cid
+						
+
+
+Loading
+
+
+
+
+
+
+
+
+
+
+English
+Español
+Deutsch
+Italiano
+Português
+Dansk
+Svenska
+Norsk
+简体中文
+繁體中文
+Български
+Ελληνικά
+Polski
+Română
+Česky
+Magyar
+Slovenčina
+Nederlands
+
+
+
+
+
+
+
+
+
+
+
+
+
+比赛开始即可进行投注
+我们提供最广泛的滚球盘服务。
+立即投注
+
+观看现场体育
+每年我们向您的电脑提供超过100,000场的现场赛事链接。
+立即投注
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+新玩家奖金
+
+超过250种精选游戏，包括最经典的现场荷官，精彩内容面向全部玩家。
+
+
+
+
+
+
+
+
+
+
+
+
+加入精彩角逐
+
+每天都有数千名玩家投身到紧张刺激的扑克大战，千万不要错过令人热血沸腾的精彩体验！
+
+
+
+
+
+
+
+
+
+
+
+
+新玩家奖金
+
+从老虎机到刮奖卡，我们种类丰富的在线游戏将让您体验娱乐无 限的欢乐感受。
+
+
+
+
+
+
+
+
+
+
+
+
+帮助 | 联系我们 | 聊天 | 银行 | 有节制博彩 | 条款与规则 | 隐私政策 | Cookies政策 | 公平赔付
+		© 2001- bet365 版权所有
+																
+			var newYear = new Date().getFullYear();
+			document.getElementById("curYear").innerHTML = newYear;
+		| 18+
+															
+
+通过进入、继续使用或浏览此网站，您即被认定接受：我们将使用特定的浏览器cookies优化您的客户享用体验。bet365仅会使用优化您服务体验的cookies，而不是可侵犯您隐私的cookies。关于我们使用cookies，以及您如何取消、管理cookies使用的更多详情，请参考我们的Cookies政策。
+bet365是世界领先的网络博彩集团之一，提供体育投注、金融、娱乐场、扑克牌、游戏及维加斯等丰富选择。我们向客户提供全部体育范围内的丰富投注，内容涵盖足球、网球、篮球、斯诺克及乒乓球等。投注一系列丰富的赛前及滚球盘盘口，无限精彩尽在每一场英超联赛、欧冠联赛和国际足球比赛中，且我们精彩的零分平局退本大赠送优惠同样适用。此外，您还可以使用网球过关投注奖金尽享网球大满贯赛事带来的众多诱人投注机会。您可同时通过手机或平板电脑访问“移动中的bet365”，体验一系列同样精彩诱人的赛事及盘口，包括现场滚球盘服务。为增加滚球盘的兴奋感受，我们还特别推出了现场链接，每年向您的电脑直播100,000多场精彩赛事。精选包括大师系列赛网球锦标赛和来自世界各地顶尖的国家级足球联赛。如想查看最新的体育投注信息，请访问我们全新的投注新闻站点。除了类别多样的体育投注之外，我们还提供丰富多种的精彩优惠。比如激动人心的欧洲精英足球奖金，如果您在英超、意甲、西甲、德甲或欧洲冠军联赛上进行过关投注，即有机会获取最高可达您彩金100％比例的奖金。另外，还有我们的零分平局退本大赠送优惠；如果您在赛前投注了"正确比分”、“半场/全场”或“比分预测”等足球赛事盘口，且假如比赛结果为0-0，我们将把输的投注取消，不惜退本大赠送！为何不尝试我们惊喜不断的在线娱乐场？250多种精彩游戏任您选择，包括21点等各种游戏。如想进行轮盘或百家乐，请立即访问现场荷官。而且，我们的扑克室是世界最大的在线扑克网络，您可在此挑战数千名现金比赛玩家或参加在线大型锦标赛事。
+			我们是由直布罗陀政府颁发执照并受直布罗陀博彩委员会监管。
+
+
+
+
+
+
+
