@@ -22,7 +22,7 @@ def open_url(url):
 
 
 def find_page_num():
-    url = "http://se.haoa05.com/listhtml/2.html"
+    url = "http://se.haoa06.com/listhtml/2.html"
     html = open_url(url)
     html = html.decode("utf-8")
     page_start = html.find('a href=')
@@ -69,12 +69,12 @@ def get_every_page_img():
 
 
 def download_every_page(page_num):
-    url = "http://se.haoa05.com/listhtml/2-" + str(page_num) + ".html"
+    url = "http://se.haoa06.com/listhtml/2-" + str(page_num) + ".html"
+    print(url)
     response = open_url(url)
     html = response.decode('utf-8')
     detail_list_imag = find_detail_page(html)
     get_every_page_detail(detail_list_imag, str(page_num))
-
 
 def get_first_page_img():
     page_count = 287
@@ -116,7 +116,7 @@ def find_detail_page(html):
 # http://se.haoa05.com
 def download_single_detail_imags(root_dir, page):
     # root_dir = "C:\\Users\\zym\\Desktop\\images"
-    url_prefixx = "http://se.haoa05.com"
+    url_prefixx = "http://se.haoa06.com"
     detail_url = url_prefixx + page
     response = open_url(detail_url)
     html = response.decode('utf-8')
